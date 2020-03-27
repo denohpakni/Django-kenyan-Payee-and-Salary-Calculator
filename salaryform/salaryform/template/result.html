@@ -1,0 +1,79 @@
+<!doctype html>
+{% extends "base.html" %} <!-- Calling the base.html extension -->
+  {% block body_block %}
+
+  <div class="container-contact100">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form">
+				<span class="contact100-form-title">
+					Salary Calculator
+				</span>
+
+				<label id="yournet" class="label-input100" for="net_pay">You take home peanust are: </label>
+				<label id="payee" class="label-input100" for="PAYE">PAYE deducted by Govt: </label>
+				<label id="NHIF" class="label-input100" for="NHIF">NHIF contribution: </label>
+				<label id="NSSF" class="label-input100" for="NSSF">NSSF contribution: </label>
+				<div class="container-contact100-form-btn">
+					<button class="contact100-form-btn" type=button onClick="location.href='/'" >Go Back & calculate again</button>
+				</div>
+			</form>
+      
+<!-- The side bar thingy -->
+			<div class="contact100-more flex-col-c-m">
+				<div class="flex-w size1 p-b-47">
+					<div class="txt1 p-r-25">
+						<span class="lnr lnr-map-marker"></span>
+					</div>
+
+					<div class="flex-col size2">
+						<span class="txt1 p-b-20">
+							Address
+						</span>
+
+						<span class="txt2">
+							Made with love at Lower Kabet Rd, Nairobi, kenya
+						</span>
+					</div>
+				</div>
+
+				<div class="dis-flex size1 p-b-47">
+					<div class="txt1 p-r-25">
+						<span class="lnr lnr-phone-handset"></span>
+					</div>
+
+					<div class="flex-col size2">
+						<span class="txt1 p-b-20">
+							Lets Talk
+						</span>
+
+						<span class="txt3">
+							+254725004435
+						</span>
+					</div>
+				</div>
+
+				<div class="dis-flex size1 p-b-47">
+					<div class="txt1 p-r-25">
+						<span class="lnr lnr-envelope"></span>
+					</div>
+
+					<div class="flex-col size2">
+						<span class="txt1 p-b-20">
+							General Support
+						</span>
+
+						<span class="txt3">
+							denohpakni@gmail.com
+						</span>
+					</div>
+				</div>
+            </div>
+<!-- End of the side bar thingy -->
+
+    </div>
+	</div>
+
+
+  {% endblock %}
+
+  
