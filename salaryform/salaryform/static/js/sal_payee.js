@@ -1,9 +1,6 @@
 function net_pay(basic_pay, benefits, insurance){
 
-    //  var basic_pay = document.getElementById("gross_salary").value; //"Please enter basic/gross pay: "
     console.log( basic_pay)
-    //  var benefits = document.getElementById("benefits").value; //"Please enter housing allowance: "
-    //  var insurance = document.getElementById("insurance").value;  //"Amount of insurance premiums paid by the company:"
   
       var gross_pay = parseInt(basic_pay) + parseInt(benefits);
       console.log( gross_pay)
