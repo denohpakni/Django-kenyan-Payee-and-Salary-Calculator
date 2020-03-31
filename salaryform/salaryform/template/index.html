@@ -1,38 +1,82 @@
-<!doctype html>
-{% extends "base.html" %} <!-- Calling the base.html extension -->
-  {% block body_block %}
-  <div class="container-contact100">
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<title>Kenyan Salary Calculator</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{% static "images/icons/favicon.ico" %}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static "vendor/bootstrap/css/bootstrap.min.css" %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static "fonts/font-awesome-4.7.0/css/font-awesome.min.css" %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static "fonts/Linearicons-Free-v1.0.0/icon-font.min.css" %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static "vendor/animate/animate.css" %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static "vendor/css-hamburgers/hamburgers.min.css" %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static "vendor/animsition/css/animsition.min.css" %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static "vendor/select2/select2.min.css" %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static "vendor/daterangepicker/daterangepicker.css" %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static "css/util.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "css/main.css" %}">
+<!--===============================================================================================-->
+<script type="text/javascript" src="{% static "js/sal_payee.js" %}"></script>
+
+</head>
+
+<body>
+	
+	<div class="container-contact100">
 		<div class="wrap-contact100">
-			<form class="contact100-form validate-form">
+			
+			<section class="contact100-form">
 				<span class="contact100-form-title">
 					Salary Calculator
 				</span>
 
 				<label class="label-input100" for="Basic salary before tax &/or deductions">Enter you Basic Salary *</label>
 				<div class="wrap-input100">
-					<input id="gross_salary" class="input100" type="number" name="basic_pay" placeholder="Basic salary before tax &/or deductions">
+					<input id="gross_salary" class="input100" type="number" name="basic_pay" placeholder="Basic salary before tax &/or deductions" required>
 					<span class="focus-input100"></span>
 				</div>
 
 				<label class="label-input100" for="benefits">Enter your Allowances &/or benefits *</label>
 				<div class="wrap-input100">
-					<input id="benefits" class="input100" type="number" name="benefits" placeholder="Eg. House Allowances">
+					<input id="benefits" class="input100" type="number" required name="benefits" placeholder="Eg. House Allowances">
 					<span class="focus-input100"></span>
 				</div>
 
 				<label class="label-input100" for="phone">Insurance payable?</label>
 				<div class="wrap-input100">
-					<input id="insurance" class="input100" type="number" name="insurance" placeholder="insurance premiums">
+					<input id="insurance" class="input100" type="number" required name="insurance" placeholder="insurance premiums">
 					<span class="focus-input100"></span>
 				</div>
 
 				<div id="submit" class="container-contact100-form-btn">
-					<a href="results/" class="btn btn-success btn-lg active" role="button" aria-pressed="true" type="submit" onclick="net_pay()">Calculate!</a>
+					<button class="btn btn-success btn-lg active" aria-pressed="true" onclick="net_pay(gross_salary.value,benefits.value,insurance.value)">Calculate!</button>
 				</div>
-			</form>
+				
+				<!--Results area -->
+				<span class="contact100-form-title">
+					Results
+				</span>
+				
+				<label id="yournet" class="label-input100" for="net_pay">You take home peanust are: </label>
+				<label id="payee" class="label-input100" for="PAYE">PAYE deducted by Govt: </label>
+				<label id="NHIF" class="label-input100" for="NHIF">NHIF contribution: </label>
+				<label id="NSSF" class="label-input100" for="NSSF">NSSF contribution: </label>
+				<!--End of the Results area -->
+			</section>
 <!-- The side bar thingy -->
 			<div class="contact100-more flex-col-c-m">
-				<div class="flex-w size1 p-b-47">
+				<div class="flex-w size1 p-b-70">
 					<div class="txt1 p-r-25">
 						<span class="lnr lnr-map-marker"></span>
 					</div>
@@ -43,7 +87,7 @@
 						</span>
 
 						<span class="txt2">
-							Made with love at Lower Kabet Rd, Nairobi, kenya
+							Made with hardwork and determination, Kenya
 						</span>
 					</div>
 				</div>
@@ -82,6 +126,16 @@
             </div>
 <!-- End of the side bar thingy -->
 		</div>
+
 	</div>
 
-  {% endblock %}
+
+<!--===============================================================================================-->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<!--===============================================================================================-->
+
+</body>
+
+</html>

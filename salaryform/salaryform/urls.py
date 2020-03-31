@@ -20,5 +20,4 @@ from salarycalc_app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index,name='index'),
-    path('results/',views.result_page, name='result_page'),
 ]
