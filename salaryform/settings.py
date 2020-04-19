@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,7 +24,7 @@ STATIC_DIR = os.path.join(BASE_DIR, 'salaryform/static')
 SECRET_KEY = '3ca07ndneuab^$z9kl8wp3xcq(%v4^4(n%t=%^vt-gc5!)jrn='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -123,4 +122,3 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [STATIC_DIR,]
 
-django_heroku.settings(locals())
