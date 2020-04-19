@@ -1,3 +1,9 @@
-django
-gunicorn
-django-heroku
+distlib==0.3.0
+dj-database-url==0.5.0
+Django==3.0.3
+django-heroku==0.3.1
+pylint==2.4.4
+python==3.8.1
+python-dateutil==2.8.1
+python3-openid==3.1.0
+virtualenv==20.0.17
