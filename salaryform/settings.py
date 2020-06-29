@@ -24,9 +24,9 @@ STATIC_DIR = os.path.join(BASE_DIR, 'salaryform/static')
 SECRET_KEY = '3ca07ndneuab^$z9kl8wp3xcq(%v4^4(n%t=%^vt-gc5!)jrn='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['kenyansalarycalculator.xyz','https://salaryform.herokuapp.com/','www.kenyansalarycalculator.xyz']
+ALLOWED_HOSTS = ['kenyansalarycalculator.xyz','https://salaryform.herokuapp.com/','127.0.0.1']
 
 
 # Application definition
