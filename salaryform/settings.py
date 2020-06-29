@@ -26,7 +26,7 @@ SECRET_KEY = '3ca07ndneuab^$z9kl8wp3xcq(%v4^4(n%t=%^vt-gc5!)jrn='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['kenyansalarycalculator.xyz','https://salaryform.herokuapp.com/','www.kenyansalarycalculator.xyz']
 
 
 # Application definition
